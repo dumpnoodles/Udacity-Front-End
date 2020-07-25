@@ -1,0 +1,79 @@
+@import "header.css";
+
+body {
+  margin: 0 200px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.blog-title {
+  text-align: center;
+}
+
+.publish-time {
+  text-align: center;
+}
+
+p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+ul {
+  margin-left: 15px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+ol {
+  margin-left: 15px;
+}
+
+ol li {
+  margin-bottom: 8px;
+}
+
+.post-button {
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #4d6cf8;
+  color: #4d6cf8;
+  border-radius: 30px;
+  padding: 10px;
+  margin: 50px 0;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.footer-right img{
+  display: inline-block;
+  width: 30px;
+}
+
+.contact {
+  margin-right: 20px;
+  border-bottom: 1px solid #000;
+}
+
+.RSS {
+  border-bottom: 1px solid #000;
+}
+
+.github {
+  margin-right: 20px;
+  border-bottom: 1px solid #000;
+}
+
+.twitter {
+  border-bottom: 1px solid #000;
+}

@@ -1,0 +1,191 @@
+@media  (max-width:560px) {
+  #app {
+    display: grid;
+    grid-template-rows: 10% 35% 10% 10% 35%;
+    grid-template-columns: 100%;
+    grid-template-areas:
+                        "headline"
+                        "form"
+                        "addTripButton"
+                        "doTrip"
+                        "entry";
+      height: 100vh;
+      font-size: 20px;
+  }
+  .holder {
+      margin-top: 5px;
+  }
+  .headline {
+      grid-area: headline;
+      font-size: 24px;
+  }
+
+  .cityName {
+      margin-top: 10px;
+  }
+
+  .doTrip {
+      display: flex;
+      flex-direction: row;
+      margin-left: 10px;
+  }
+
+  .departure {
+      margin-top: 10px;
+  }
+
+  #form {
+      grid-area: form;
+  }
+
+  .imgLink {
+      width: 35%;
+      height:35%;
+  }
+
+
+  .addTripButton {
+      grid-area: addTripButton;
+      margin: 10px 0 0 10px;
+  }
+
+  #addTrip {
+      cursor: pointer;
+  }
+
+  #removeTrip {
+      cursor: pointer;
+  }
+
+  #watchTrip {
+      cursor: pointer;
+      margin-left: 15px;
+  }
+
+  .entry{
+      grid-area: entry;
+      margin: 10px 10px 10px 0;
+  }
+
+  .title{
+      font-size: 24px;
+      margin: 10px 0 10px 10px;
+  }
+
+  #entryHolder{
+      margin-left: 10px;
+  }
+
+  #tip{
+      font-size: 24px;
+  }
+
+  #maxTemp{
+      font-size: 24px;
+  }
+
+  #minTemp{
+      font-size: 24px;
+  }
+
+  #content{
+      font-size: 24px;
+  }
+
+  label{
+      display:block;
+      font-size: 27px;
+  }
+
+  input{
+      display:block;
+      height: 60px;
+      width: 60px;
+      background:#f2f2f2;
+      color: #000;
+      font-size: 20px;
+      font-family: 'Oswald', sans-serif;
+      border: none;
+  }
+
+  button{
+      width: 3.5rem;
+      height: 5rem;
+      background: #3b4a6b;
+      color: #f0d43a;
+      font-size: 26px;
+      font-family: 'Oswald', sans-serif;
+      border: none;
+      box-shadow: 2px 4px 5px #444;
+  }
+  h1{
+      font-size: 30px;
+  }
+}
+
+@media (min-width:560px) {
+  #app{
+      font-family: 'Oswald', sans-serif;
+      display: grid;
+      grid-template-columns: 40% 20% 40%;
+      grid-template-rows: 10% 45% 45%;
+      grid-template-areas:"headline headline headline"
+                          "form addTripButton entry"
+                          "form doTrip entry";
+      height: 100vh;
+      font-size: 20px;
+  }
+  #form {
+      margin-top: 25px;
+  }
+  .departure {
+      margin-top: 50px;
+  }
+  label {
+      display: block;
+      font-size: 36px;
+  }
+  input{
+      display:block;
+      height: 60px;
+      width: 320px;
+      background:#f2f2f2;
+      color: #000;
+      font-size: 20px;
+      font-family: 'Oswald', sans-serif;
+      border: none;
+  }
+  .addTripButton {
+      grid-area: addTripButton;
+      align-self: end;
+      margin-bottom: 50px;
+  }
+  .doTrip {
+      grid-area: doTrip;
+      display: flex;
+      flex-direction: column;
+  }
+  #watchTrip {
+      cursor: pointer;
+      margin-top: 50px;
+  }
+  button{
+      width: 7.5rem;
+      height: 5rem;
+      background: #3b4a6b;
+      color: #f0d43a;
+      font-size: 26px;
+      font-family: 'Oswald', sans-serif;
+      border: none;
+      box-shadow: 2px 4px 5px #444;
+  }
+  .title{
+      font-size: 35px;
+      margin: 10px 0 10px 10px;
+  }
+  .entry{
+      grid-area: entry;
+      background: rgba(59, 74, 107, .4);
+      margin: 25px 25px 50px 0;
+  }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DumpNoodles</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header-box">
+      <div class="header-left">
+          <p class="header-name"><a href="#">Dump Noodles</a></p>
+      </div>
+      <nav class="header-right">
+        <ul class="list-items">
+          <li class="list-item"><a class="list-nav" href="#">Articles</a></li>
+          <li class="list-item"><a class="list-nav" href="#">About</a></li>
+          <li class="list-item"><a class="list-nav" href="https://mail.google.com/">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- main -->
+    <main>
+      <section>
+        <form class="" onsubmit="Client.handleSubmit(event)">
+            <input id="name" type="text" name="input" value="" onblur="Client.onBlur()" placeholder="Please enter a url to use textapi">
+            <div id="tip"></div>
+            <input type="submit" name="" value="submit" onclick="Client.handleSubmit(event)" onsubmit="Client.handleSubmit(event)">
+        </form>
+      <section>
+      <section>
+        <h1 id="formResult">Form Results: </h1>
+        <div id="results">
+          <div class="response" id="polarity">
+            <p id="text_polarity">Text Polarity: </p>
+            <p id="polarity_confidence">Polarity Confidence: </p>
+          </div>
+          <div class="response" id="subjectivity">
+            <p id="text_subjectivity">Text Subjectivity: </p>
+            <p id="subjectivity_confidence">Subjectivity Confidence: </p>
+          </div>
+          <div class="response" id="text">
+            <p id="some_text">Some text: </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer>
+      <div class="footer-left">
+          <span><a  class="contact"href="https://mail.google.com/">Contact</a></span>
+          <span><a  class="RSS" href="https://mail.google.com/">RSS</a></span>
+      </div>
+    </footer>
+    <script>
+      // Check that service workers are supported
+      if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js').then(registration =>{
+            console.log('SW registered successfuly: ', registration);
+          });
+        });
+      }else{
+        console.log("Service Working not supported");
+      }
+    </script>
+  </body>
+</html>

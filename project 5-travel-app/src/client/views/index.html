@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Travel Planner</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class ="holder headline">
+        Travel Planner App
+      </div>
+      <form id="form" class="holder form">
+        <label for="cityName" class="cityName">Enter city name here</label>
+        <input type="text" id="cityName" placeholder="enter city name here">
+        <label for="departure" class="departure">Enter departure time here</label>
+        <input type="date" id="departure">
+      </form>
+      <div class="addTripButton"><button id="addTrip" type="submit"> AddTrip </button></div>
+      <div class="doTrip">
+        <button id="removeTrip" type="submit"> removeTrip </button>
+        <button id="watchTrip" type="submit"> watchTrip </button>
+      </div>
+      <div class="holder entry">
+        <div class="title">Your Trip Note</div>
+        <div id="entryHolder">
+          <div id="tip">Tips: </div>
+          <div id="maxTemp">Max-Temp: </div>
+          <div id="minTemp">Min-Temp: </div>
+          <div id="content">Weather: </div>
+          <div id="city">City Photo: </div>
+          <div id="photo"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Service Workers -->
+    <script>
+      // Check that service workers are supported
+      if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js');
+        });
+      }
+    </script>
+  </body>
+</html>
